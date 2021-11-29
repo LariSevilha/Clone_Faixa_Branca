@@ -1,0 +1,23 @@
+<div class="bac">
+  <h3 class="tit">SERVIÇOS</h3>
+  <h6 class="sub">CONHEÇA ALGUNS DE NOSSOS SERVIÇOS</h6>
+  <ul class="list">
+    <% @service.each  do |item| %>
+      <li>
+        <div class="moldura">
+          <div class="image">
+            <%= image_tag(item.image_url) %>
+          </div>
+        </div>
+        <div class="titleSe">
+          <%= item.title %>
+        </div>
+        <div class="textSe">
+          <%= item.text%>
+        </div>
+      </li>
+    <%end%>
+    <li>
+    </li>
+  </ul>
+</div>

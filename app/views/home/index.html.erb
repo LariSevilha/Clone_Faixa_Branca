@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="section__header">
+    <h1 class="section__title">Empresa</h1>
+    <p class="ti">
+      Desenvolvemos um trabalho de acordo com o planejamento que cada cliente necessita, priorisando a satisfação total do mesmo. Para que isso ocorra, trabalhamos com profissionais qualificados, com cursos e especializações para cada tipo de serviço e maquinário utilizado.
+    </p>
+    <div class="bottom">
+      <a><%= link_to 'Conheça a empresa', company_index_path(@company) %></a>
+    </div>
+    <br>
+  </div>
+</div>
+<div class="service">
+  <div class="ts">
+    <h3>SERVIÇOS</h3>
+  </div>
+  <ul class="list">
+    <% @service.each  do |item| %>
+      <li>
+        <div class="moldura">
+          <div class="image">
+            <%= image_tag(item.image_url) %>
+          </div>
+        </div>
+        <div class="title">
+          <%= item.title %>
+        </div>
+        <div class="text">
+          <%= item.text%>
+        </div>
+      </li>
+    <%end%>
+    <li>
+    </li>
+  </ul>
+  <div class="bottom2">
+    <a><%= link_to 'Veja mais serviços', service_index_path(@service) %></a>
+  </div>
+</div>

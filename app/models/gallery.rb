@@ -1,0 +1,7 @@
+class Gallery < ApplicationRecord
+  
+
+
+
+
+end
