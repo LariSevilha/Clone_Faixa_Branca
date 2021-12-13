@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_133412) do
+ActiveRecord::Schema.define(version: 2021_12_01_143501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
-    t.string "image"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "description"
+    t.string "image"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -41,25 +41,21 @@ ActiveRecord::Schema.define(version: 2021_11_24_133412) do
   end
 
   create_table "galleries", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "homes", force: :cascade do |t|
     t.string "title"
-    t.string "text"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "services", force: :cascade do |t|
-    t.string "title"
     t.string "text"
     t.string "image"
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

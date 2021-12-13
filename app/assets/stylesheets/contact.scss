@@ -17,19 +17,90 @@
   font-weight: 300;
   margin: 40px;
 }
-.form_input {
-  display: flex;
-  width: 500px;
-  height: 100px;
+.container{
+  width: 100%;
+  margin:0 auto;
+  height: 100%;
+  padding: 0 auto;
 }
-// .assunto_field {
-//   // position: relative;
-//   // left: 1100;
-// }
-.formu {
-  display: flex;
-  flex-direction: column;
+.container left{
+  width: 50%;
+  text-align:justify;
+  display: relative;
+  float: right;
+ }
+ 
+.container right{
+   width: 50%;
+  margin-bottom: 20px;
+  float: left;
+  display: relative;
 }
-.field {
-  flex: space-between;
+.form_input  {
+  height: 3rem;
+  line-height: 3rem;
+   margin: 10px;
+   width: 500px;
+}
+.form_input_left  {
+  height: 3rem;
+  line-height: 3rem;
+   margin: 10px;
+   width: 500px;
+}
+ p{
+   margin:2px;
+   padding: 0px;
+ }
+  .left{
+   display: flex;
+   margin-top:15px;
+ }
+ .right{
+   display: flex;
+   margin-top:25px;
+ }
+.form_label{
+  color:#777777;
+}
+.form_label left{
+  position: relative;
+  bottom: 220px;
+  top:50px;
+  text-align:center;
+}
+.form_input_msg{
+  height: 7rem;
+  line-height: 3rem;
+  margin: 10px;
+  width: 1100px;
+}
+.form_label_mensage{
+  color:#777777;
+  font-size: 15px;
+}
+
+
+.form_info{
+  float: right;
+   font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.submit{
+  .submit_buttom{
+    display: inline-block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1.4rem;
+    border: 0;
+    border-radius: 4px;
+    background:  #C7783E;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    float:right;
+  }
 }

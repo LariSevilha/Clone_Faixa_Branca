@@ -3,43 +3,39 @@
 <p class="p">Estamos a sua disposição para esclarecer dúvidas, receber sugestões, elogios ou críticas. <br>
   Utilize o formulário abaixo para nos enviar uma mensagem. <br>
   faixabranca@faixabranca.com.br / (67) 3441-4905, (67) 9 9965-9343 e (67) 9 9965-9342.</p>
-<div class="formu">
+<div  class="container">
   <%= form_for @contact, url:contact_index_path, html: {class: "form"} do |i|%>
-    <div class="field">
-      <div class="name_field">
-        <%=i.label :name, "Seu nome", class:"form_label"   %>
-        <%=i.text_field :name, class:"form_input",required: true,placeholder:"Digite seu nome"%>
-      </div>
+
+  <div class="right">
+    <div >  
+      <%=i.label :name, "Seu nome", class:"form_label"   %><br>
+      <%=i.text_field :name, class:"form_input",required: true,placeholder:"Digite seu nome"%>
     </div>
-    <div class="field">
-      <div class="assunto_field">
-        <%=i.label :assunto, "Assunto", class:"form_label"   %>
+    <div> 
+      <%=i.label :assunto, "Assunto", class:"form_label" %> <br>
         <%=i.text_field :assunto, class:"form_input",required: true,placeholder:"Orçamento, elogios, critíca"%>
-      </div>
     </div>
-    <div class="field">
-      <div class="email_field">
-        <%=i.label :email, "Seu e-mail", class:"form_label"   %>
-        <%=i.text_field :email, class:"form_input", required: true,placeholder:"Digite seu e-mail"%>
-      </div>
+  </div>
+  <div class="left">
+    <div>
+        <%=i.label :email, "Seu e-mail", class:"form_label"   %><br>
+        <%=i.text_field :email, class:"form_input_left", required: true,placeholder:"Digite seu e-mail"%>
     </div>
-    <div class="field">
-      <div class="numero_field">
-        <%=i.label :numero, "Seu telefone", class:"form_label"   %>
-        <%=i.text_field :numero, class:"form_input",required: true,placeholder:"Digite seu número"%>
-      </div>
+    <div>
+      <%=i.label :numero, "Seu telefone", class:"form_label"   %> <br>
+        <%=i.text_field :numero, class:"form_input_left",required: true,placeholder:"Digite seu número"%>
     </div>
-    <div class="field">
-      <div class="mensage_field">
-        <%=i.label :mensagem, "Sua mensagem", class:"form_label"   %>
-        <%=i.text_area :mensagem, class:"form_input",required: true,placeholder:"Digite sua mensagem"%>
+  </div>
+    <br>
+      <div class="msg">
+        <%=i.label :mensagem, "Sua mensagem", class:"form_label_mensage"   %> <br>
+          <%=i.text_field :mensagem, class:"form_input_msg",required: true,placeholder:"Digite sua mensagem"%>      
       </div>
-    </div>
-    <div class="actions">
-      <div class="form_bottom">
-        <%=i.submit "Enviar", :class => 'submit_buttom' %>
-      </div>
-    </div>
-  <%end%>
+  <div class = "submit">
+     <span class="form_info">(*) Campo necessários</span> <br>
+    <%=i.submit "Enviar", :class => 'submit_buttom' %>
+  </div>
+<%end%> 
+</div>
 </div>
 <%# test %>
